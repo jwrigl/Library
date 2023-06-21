@@ -37,6 +37,7 @@ function addBook(book) {
     //adds book to the library list
     library.push(book);
 
+    deleteLibraryElements();
     buildLibrary();
 }
 
@@ -49,3 +50,6 @@ function buildLibrary() {
  }
 }
 
+function deleteLibraryElements() {
+    document.getElementById("libraryContainer").innerHTML = "";
+}

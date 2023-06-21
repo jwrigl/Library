@@ -26,10 +26,9 @@ function handleDataEntry() {
 
     let book = new Book(title, author, genre);
 
-    titleInput.value, authorInput.value, genreInput.value = "";
-
-
-
+    titleInput.value = "";
+    authorInput.value = "";
+    genreInput.value = "";
 
     addBook(book);
 }

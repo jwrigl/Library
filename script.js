@@ -21,5 +21,10 @@ function addBook() {
 
 function buildLibrary() {
  //Takes data from library array and builds HTML
+ for (let i = 0; i < library.length; i++) {
+     let book = document.createElement("div");
+     book.innerText = library[i].title + " " + library[i].author + " " + library[i].genre;
+     document.getElementById("libraryContainer").appendChild(book);
+ }
 }
 

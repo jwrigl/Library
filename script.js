@@ -116,10 +116,7 @@ function buildLibraryDisplay() {
 
 function removeBook(id) {
     library.splice(id, 1);
-    deleteLibraryElements();
-    deleteLibraryDisplay();
-    buildLibrary();
-    buildLibraryDisplay();
+    rebuildLibrary();
 }
 
 function deleteLibraryDisplay() {
@@ -131,6 +128,12 @@ function markAsRead(i) {
     objectToModify = library[i];
     objectToModify.read = true;
     library[i] = objectToModify;
+    rebuildLibrary();
+}
+
+function rebuildLibrary() {
     deleteLibraryDisplay();
+    deleteLibraryElements();
+    buildLibrary();
     buildLibraryDisplay();
 }

@@ -73,6 +73,9 @@ function buildLibraryDisplay() {
 
         bookContainer.style.display = "flex";
         bookContainer.style.flexDirection = "column";
+
+        bookContainer.setAttribute("id",i)
+
         //change the names of these containers, confusing
         displayContainer.appendChild(bookContainer);
 

@@ -6,6 +6,7 @@ function Book(title, author, genre) {
     this.title = title;
     this.author = author;
     this.genre = genre;
+    this.read = false;
     this.recall = function() {
         console.log(this.title + " " + this.author + " " + this.genre);
     }
@@ -119,6 +120,12 @@ function removeBook(id) {
 function deleteLibraryDisplay() {
     bookDisplay = document.getElementById("displayContainer")
     bookDisplay.remove()
+}
 
-
+function markAsRead(i) {
+    objectToModify = library[i];
+    objectToModify.read = true;
+    library[i] = objectToModify;
+    deleteLibraryDisplay();
+    buildLibraryDisplay();
 }

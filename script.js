@@ -59,3 +59,39 @@ function buildLibrary() {
 function deleteLibraryElements() {
     document.getElementById("libraryContainer").innerText = "";
 }
+
+function buildLibraryDisplay() {
+    let parentContainer = document.getElementById("bookDisplayContainer");
+
+    let displayContainer = document.createElement("div");
+    displayContainer.style.display = "grid";
+    displayContainer.style.gridTemplateColumns="repeat(auto-fit,minmax(250px,1fr))";
+    parentContainer.appendChild(displayContainer);
+
+    for (let i = 0; i < library.length; i++) {
+        let bookContainer = document.createElement("div");
+
+        bookContainer.style.display = "flex";
+        bookContainer.style.flexDirection = "column";
+        //change the names of these containers, confusing
+        displayContainer.appendChild(bookContainer);
+
+        let bookIcon = document.createElement("h1")
+        bookIcon.innerText = "📖";
+        bookContainer.appendChild(bookIcon);
+
+        let bookTitle = document.createElement("h2");
+        bookTitle.innerText = library[i].title;
+        bookContainer.appendChild(bookTitle);
+
+        let bookAuthor = document.createElement("h3");
+        bookAuthor.innerText = "By " + library[i].author;
+        bookContainer.appendChild(bookAuthor);
+
+        let bookGenre = document.createElement("h4");
+        bookGenre.innerText = "Genre: " + library[i].genre;
+        bookContainer.appendChild(bookGenre);
+
+    }
+
+}

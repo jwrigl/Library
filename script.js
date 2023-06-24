@@ -61,6 +61,7 @@ function deleteLibraryElements() {
 }
 
 function buildLibraryDisplay() {
+
     let parentContainer = document.getElementById("bookDisplayContainer");
 
     let displayContainer = document.createElement("div");
@@ -95,10 +96,10 @@ function buildLibraryDisplay() {
         bookGenre.innerText = "Genre: " + library[i].genre;
         bookContainer.appendChild(bookGenre);
 
-        let removeBook = document.createElement("button");
-        removeBook.innerText = "Remove";
-        removeBook.onclick = removeBook(i)
-        bookContainer.appendChild(removeBook);
+        let removeBookButton = document.createElement("button");
+        removeBookButton.innerText = "Remove";
+        removeBookButton.onclick = () => removeBook(i);
+        bookContainer.appendChild(removeBookButton);
 
 
     }
@@ -113,4 +114,8 @@ function removeBook(id) {
     deleteLibraryDisplay();
     buildLibrary();
     buildLibraryDisplay();
+}
+
+function deleteLibraryDisplay() {
+    bookDisplayContainer = document.getElementById("bookDisplayContainer")
 }

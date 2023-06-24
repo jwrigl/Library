@@ -92,6 +92,16 @@ function buildLibraryDisplay() {
         bookGenre.innerText = "Genre: " + library[i].genre;
         bookContainer.appendChild(bookGenre);
 
+        let removeBook = document.createElement("button");
+        removeBook.innerText = "Remove";
+        removeBook.onclick = removeBook()
+        bookContainer.appendChild(removeBook);
+
+
     }
 
+}
+
+function removeBook() {
+    return;
 }

@@ -104,6 +104,11 @@ function buildLibraryDisplay() {
         removeBookButton.onclick = () => removeBook(i);
         bookContainer.appendChild(removeBookButton);
 
+        let markAsReadButton = document.createElement("button");
+        markAsReadButton.innerText = "Mark as read";
+        markAsReadButton.onclick = () => markAsRead(i);
+        bookContainer.appendChild(markAsReadButton);
+
 
     }
 

@@ -67,6 +67,8 @@ function buildLibraryDisplay() {
     let displayContainer = document.createElement("div");
     displayContainer.style.display = "grid";
     displayContainer.style.gridTemplateColumns="repeat(auto-fit,minmax(250px,1fr))";
+    displayContainer.setAttribute("id", "displayContainer");
+
     parentContainer.appendChild(displayContainer);
 
     for (let i = 0; i < library.length; i++) {
@@ -108,8 +110,6 @@ function buildLibraryDisplay() {
 
 function removeBook(id) {
     library.splice(id, 1);
-    elementForDeletion = document.getElementById(id);
-    elementForDeletion.remove();
     deleteLibraryElements();
     deleteLibraryDisplay();
     buildLibrary();
@@ -117,5 +117,8 @@ function removeBook(id) {
 }
 
 function deleteLibraryDisplay() {
-    bookDisplayContainer = document.getElementById("bookDisplayContainer")
+    bookDisplay = document.getElementById("displayContainer")
+    bookDisplay.remove()
+
+
 }

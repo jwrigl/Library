@@ -20,6 +20,12 @@ function handleDataEntry() {
     let authorInput = document.getElementById("bookAuthor")
     let genreInput = document.getElementById("bookGenre")
 
+    if (titleInput.value === "" || authorInput.value === "" || genreInput.value === "") {
+        // At least one of the input values is empty
+        console.log("One or more inputs are empty.");
+        return;
+    }
+
     let title = titleInput.value;
     let author = authorInput.value;
     let genre = genreInput.value;
@@ -51,5 +57,5 @@ function buildLibrary() {
 }
 
 function deleteLibraryElements() {
-    document.getElementById("libraryContainer").innerHTML = "";
+    document.getElementById("libraryContainer").innerText = "";
 }

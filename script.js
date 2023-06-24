@@ -44,8 +44,7 @@ function addBook(book) {
     //adds book to the library list
     library.push(book);
 
-    deleteLibraryElements();
-    buildLibrary();
+    rebuildLibrary();
 }
 
 function buildLibrary() {

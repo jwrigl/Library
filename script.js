@@ -57,9 +57,6 @@ function buildLibrary() {
  }
 }
 
-function deleteLibraryElements() {
-    document.getElementById("libraryContainer").innerText = "";
-}
 
 function buildLibraryDisplay() {
 
@@ -114,13 +111,21 @@ function buildLibraryDisplay() {
 
 }
 
+function deleteLibraryElements() {
+    document.getElementById("libraryContainer").innerText = "";
+}
+
 function removeBook(id) {
     library.splice(id, 1);
+    console.log(library)
     rebuildLibrary();
 }
 
 function deleteLibraryDisplay() {
     bookDisplay = document.getElementById("displayContainer")
+    while (bookDisplay.firstChild) {
+        bookDisplay.firstChild.remove()
+    }
     bookDisplay.remove()
 }
 
@@ -128,12 +133,13 @@ function markAsRead(i) {
     objectToModify = library[i];
     objectToModify.read = true;
     library[i] = objectToModify;
+    console.log("after read",library)
     rebuildLibrary();
 }
 
 function rebuildLibrary() {
-    deleteLibraryDisplay();
     deleteLibraryElements();
+    deleteLibraryDisplay();
     buildLibrary();
     buildLibraryDisplay();
 }

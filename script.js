@@ -95,6 +95,10 @@ function buildLibraryDisplay() {
         bookGenre.innerText = "Genre: " + library[i].genre;
         bookContainer.appendChild(bookGenre);
 
+        let bookRead = document.createElement("h4");
+        bookRead.innerText = "Read: " + library[i].read;
+        bookContainer.appendChild(bookRead);
+
         let removeBookButton = document.createElement("button");
         removeBookButton.innerText = "Remove";
         removeBookButton.onclick = () => removeBook(i);

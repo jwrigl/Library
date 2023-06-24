@@ -97,7 +97,7 @@ function buildLibraryDisplay() {
 
         let removeBook = document.createElement("button");
         removeBook.innerText = "Remove";
-        removeBook.onclick = removeBook()
+        removeBook.onclick = removeBook(i)
         bookContainer.appendChild(removeBook);
 
 
@@ -105,6 +105,12 @@ function buildLibraryDisplay() {
 
 }
 
-function removeBook() {
-    return;
+function removeBook(id) {
+    library.splice(id, 1);
+    elementForDeletion = document.getElementById(id);
+    elementForDeletion.remove();
+    deleteLibraryElements();
+    deleteLibraryDisplay();
+    buildLibrary();
+    buildLibraryDisplay();
 }

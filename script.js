@@ -84,7 +84,7 @@ function buildLibraryDisplay() {
         displayContainer.appendChild(bookContainer);
 
         let bookIcon = document.createElement("h1")
-        bookIcon.innerText = "📖";
+        bookIcon.innerText = "📘";
         bookContainer.appendChild(bookIcon);
 
         let bookTitle = document.createElement("h2");

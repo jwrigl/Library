@@ -7,3 +7,7 @@ button {
     width: 250px;
     height: 50px;
 }
+
+#title {
+    font-size: 3rem;
+}

@@ -127,6 +127,7 @@ function removeBook(id) {
 
 function deleteLibraryDisplay() {
     bookDisplay = document.getElementById("displayContainer")
+    if(!bookDisplay) {return;}
     while (bookDisplay.firstChild) {
         bookDisplay.firstChild.remove()
     }

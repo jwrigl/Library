@@ -63,7 +63,8 @@ function buildLibraryDisplay() {
 
     let displayContainer = document.createElement("div");
     displayContainer.style.display = "grid";
-    displayContainer.style.gridTemplateColumns="repeat(auto-fit,minmax(250px,1fr))";
+    displayContainer.style.gridTemplateColumns="repeat(auto-fit,minmax(250px,1fr)";
+    //displayContainer.style.gap = "10px";
     displayContainer.setAttribute("id", "displayContainer");
 
     parentContainer.appendChild(displayContainer);
@@ -73,6 +74,7 @@ function buildLibraryDisplay() {
 
         bookContainer.style.display = "flex";
         bookContainer.style.flexDirection = "column";
+        bookContainer.style.alignItems = "center";
 
         bookContainer.setAttribute("id",i)
 
@@ -127,6 +129,7 @@ function removeBook(id) {
 
 function deleteLibraryDisplay() {
     bookDisplay = document.getElementById("displayContainer")
+    // exits function if there is no bookDisplay (when first book added)
     if(!bookDisplay) {return;}
     while (bookDisplay.firstChild) {
         bookDisplay.firstChild.remove()

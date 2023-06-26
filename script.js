@@ -151,3 +151,7 @@ function rebuildLibrary() {
     buildLibrary();
     buildLibraryDisplay();
 }
+
+function displayModal() {
+    document.getElementById("modalContainer").style.display = "block";
+}

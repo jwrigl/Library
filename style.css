@@ -11,3 +11,7 @@ button {
 #title {
     font-size: 3rem;
 }
+
+#modalContainer {
+    display: none;
+}

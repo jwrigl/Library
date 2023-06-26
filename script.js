@@ -81,6 +81,7 @@ function buildLibraryDisplay() {
 
         let bookIcon = document.createElement("h1")
         bookIcon.innerText = "📘";
+        bookIcon.style.fontFamily = "google-emoji"
         bookContainer.appendChild(bookIcon);
 
         let bookTitle = document.createElement("h2");

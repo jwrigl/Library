@@ -43,6 +43,7 @@ function handleDataEntry() {
 function addBook(book) {
     //adds book to the library list
     library.push(book);
+    hideModal();
 
     rebuildLibrary();
 }
@@ -154,4 +155,8 @@ function rebuildLibrary() {
 
 function displayModal() {
     document.getElementById("modalContainer").style.display = "block";
+}
+
+function hideModal() {
+    modalContainer = document.getElementById("modalContainer").style.display="none";
 }

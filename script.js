@@ -44,6 +44,7 @@ function addBook(book) {
     //adds book to the library list
     library.push(book);
     hideModal();
+    updateBookCount();
 
     rebuildLibrary();
 }
@@ -125,6 +126,7 @@ function deleteLibraryElements() {
 function removeBook(id) {
     library.splice(id, 1);
     console.log(library)
+    updateBookCount();
     rebuildLibrary();
 }
 
@@ -159,4 +161,8 @@ function displayModal() {
 
 function hideModal() {
     modalContainer = document.getElementById("modalContainer").style.display="none";
+}
+
+function updateBookCount() {
+    document.getElementById("bookCount").innerText = library.length;
 }

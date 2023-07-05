@@ -104,15 +104,24 @@ function buildLibraryDisplay() {
         bookRead.innerText = "Read: " + library[i].read;
         bookContainer.appendChild(bookRead);
 
+        let bookButtonContainer = document.createElement("div");
+        bookButtonContainer.style.display = "flex";
+        bookContainer.appendChild(bookButtonContainer);
+        
+
         let removeBookButton = document.createElement("button");
         removeBookButton.innerText = "Remove";
         removeBookButton.onclick = () => removeBook(i);
-        bookContainer.appendChild(removeBookButton);
+        removeBookButton.style.height = "auto";
+        removeBookButton.style.width = "auto";
+        bookButtonContainer.appendChild(removeBookButton);
 
         let markAsReadButton = document.createElement("button");
         markAsReadButton.innerText = "Mark as read";
         markAsReadButton.onclick = () => markAsRead(i);
-        bookContainer.appendChild(markAsReadButton);
+        markAsReadButton.style.height = "auto";
+        markAsReadButton.style.width = "auto";
+        bookButtonContainer.appendChild(markAsReadButton);
 
 
     }

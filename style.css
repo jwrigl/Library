@@ -46,7 +46,11 @@ button {
 
 #modalBookButton {
     height: 1.5rem;
-    width: 10rem;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    padding-top: 10px;
 }
 
 .modalInputContainer {

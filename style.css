@@ -30,10 +30,11 @@ button {
 .modal {
     background-color: white;
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -41,4 +42,16 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     
+}
+
+#modalBookButton {
+    height: 1.5rem;
+    width: 10rem;
+}
+
+.modalInputContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

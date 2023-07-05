@@ -24,16 +24,22 @@
 
     <div id="modalContainer">
         <div class="modal">
-            <label for="bookTitle">Book Title</label>
-            <input type="text" id="bookTitle">
+            <div class="modalInputContainer">
+                <label for="bookTitle">Book Title</label>
+                <input type="text" id="bookTitle">
+            </div>
     
-            <label for="bookAuthor">Book Author</label>
-            <input type="text" id="bookAuthor">
+            <div class="modalInputContainer">
+                <label for="bookAuthor">Book Author</label>
+                <input type="text" id="bookAuthor">
+            </div>
     
-            <label for="bookGenre">Book Genre</label>
-            <input type="text" id="bookGenre">    
+            <div class="modalInputContainer">
+                <label for="bookGenre">Book Genre</label>
+                <input type="text" id="bookGenre">
+            </div>
 
-            <button onclick="handleDataEntry()">Add Book</button>
+            <button id="modalBookButton" onclick="handleDataEntry()">Add Book</button>
         </div>
     </div>
 
